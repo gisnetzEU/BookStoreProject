@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cart</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Oswald"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open Sans"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body class="w3-light-grey">
+    <div class="container w3-white">
+      <header class="w3-container w3-white w3-center" style="padding:15px 1px">
+        <h2 class="w3-xxlarge">Book Store - Shopping Cart</h2>
+      </header>
+
+      <br />
+
+      <nav class="w3-container w3-padding w3-light-blue">
+        <a href="index.html">Cart</a> -
+        <a href="book_stock.html">Book Stock</a>
+      </nav>
+
+      <br />
+
+      <div class="w3-container w3-padding w3-black ">
+        <h6>Click on the book you want to buy</h6>
+      </div>
+
+      <br />
+
+      <ul class="books w3-ul w3-hoverable w3-center"></ul>
+
+      <hr />
+
+      <div class="cart-panel w3-container w3-padding w3-white">
+        <h5 class="card-title" id="tasks-title">Cart</h5>
+
+        Total Quantity: <span id="cart-quantity">TOTAL_QUANTITY</span> - Total
+        Amount: <span id="cart-amount">TOTAL_AMOUNT</span>
+
+        <button id="cart-delete-all" class="btn btn-dark">
+          <i class="fa fa-delete"></i> Delete All Todos
+        </button>
+
+        <ul id="cart" class="w3-ul w3-hoverable"></ul>
+      </div>
+    </div>
+
+    <footer class="w3-black">
+      <p><i class="fa fa-copyright" aria-hidden="true">Copyright</i></p>
+    </footer>
+
+    <template id="book-elem-tpl">
+      <li class="book">
+        <h6 class="bookTitle">TITLE</h6>
+        <img src="URL_IMG" /><br />
+        <br />
+        <span class="bookAuthor"><b>Author:</b> AUTHOR</span>
+        <span class="bookPrice">PRICE</span>&nbsp;&euro;
+        <br />
+        <button type="button" name="buy" class="buy btn btn-info">
+          <i class="fa fa-plus-circle" aria-hidden="true"></i> Buy
+        </button>
+      </li>
+    </template>
+
+    <template id="cartElemTpl">
+      <li class="cartBook">
+        <img src="URL_IMG" />
+        <div class="bookData">
+          <span class="bookTitle">TITLE</span>
+          <span class="bookAuthor"><b>Author:</b> AUTHOR</span>
+        </div>
+        -
+        <span class="bookQuantity">QUANTITY</span>
+        &times;
+        <span class="bookPrice">PRICE</span> &euro; =
+        <span class="bookAmount">AMOUNT</span> &euro; &nbsp;
+        <button class="delete btn btn-dark">
+          <i class="fa fa-delete"></i> Delete
+        </button>
+      </li>
+    </template>
+
+    <script src="error_handling.js"></script>
+    <script src="storage.js"></script>
+    <script src="cart.js"></script>
+    <script src="index_init.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
