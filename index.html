@@ -46,7 +46,7 @@
 
       <br />
 
-      <div class="w3-container w3-padding w3-black ">
+      <div class="w3-container w3-padding w3-gray ">
         <h6>Click on the book you want to buy</h6>
       </div>
 
@@ -57,20 +57,24 @@
       <hr />
 
       <div class="cart-panel w3-container w3-padding w3-white">
-        <h5 class="card-title" id="tasks-title">Cart</h5>
-
-        Total Quantity: <span id="cart-quantity">TOTAL_QUANTITY</span> - Total
-        Amount: <span id="cart-amount">TOTAL_AMOUNT</span>
-
-        <button id="cart-delete-all" class="btn btn-dark">
-          <i class="fa fa-delete"></i> Delete All Todos
-        </button>
-
+        <h2 class="card-title" id="tasks-title">
+          Cart<i class="fa fa-shopping-cart" style="font-size:48px"></i>
+        </h2>
+        <h5>
+          Total Quantity: <span id="cart-quantity">TOTAL_QUANTITY</span> - Total
+          Amount: <span id="cart-amount">TOTAL_AMOUNT </span>&euro;
+          <span>
+            <button id="cart-delete-all" class="btn  btn-outline-secondary">
+              <i class="fa fa-remove"></i>  Remove All Books
+            </button>
+          </span>
+        </h5>
+        <br />
         <ul id="cart" class="w3-ul w3-hoverable"></ul>
       </div>
     </div>
 
-    <footer class="w3-black">
+    <footer class="w3-gray">
       <p><i class="fa fa-copyright" aria-hidden="true">Copyright</i></p>
     </footer>
 
@@ -79,7 +83,7 @@
         <h6 class="bookTitle">TITLE</h6>
         <img src="URL_IMG" /><br />
         <br />
-        <span class="bookAuthor"><b>Author:</b> AUTHOR</span>
+        <span class="bookAuthor"><b>Author:</b> AUTHOR</span><br />
         <span class="bookPrice">PRICE</span>&nbsp;&euro;
         <br />
         <button type="button" name="buy" class="buy btn btn-info">
@@ -90,19 +94,31 @@
 
     <template id="cartElemTpl">
       <li class="cartBook">
-        <img src="URL_IMG" />
-        <div class="bookData">
-          <span class="bookTitle">TITLE</span>
-          <span class="bookAuthor"><b>Author:</b> AUTHOR</span>
+        <div class="row">
+          <div class="column">
+            <img src="URL_IMG" />
+          </div>
+          <div class="column">
+            <div class="bookData">
+              <span class="bookTitle">TITLE</span><br />
+              (<span class="bookAuthor"><b>Author:</b> AUTHOR</span>)
+            </div>
+          </div>
+
+          <div class="column">
+            <strong>
+              <span class="bookQuantity">QUANTITY</span>
+              &times;
+              <span class="bookPrice">PRICE</span> &euro; =
+              <span class="bookAmount">AMOUNT</span> &euro; &nbsp;
+            </strong>
+          </div>
+          <div class="column">
+            <button class="delete btn btn-outline-secondary">
+              <i class="fa fa-remove"></i>  Remove book
+            </button>
+          </div>
         </div>
-        -
-        <span class="bookQuantity">QUANTITY</span>
-        &times;
-        <span class="bookPrice">PRICE</span> &euro; =
-        <span class="bookAmount">AMOUNT</span> &euro; &nbsp;
-        <button class="delete btn btn-dark">
-          <i class="fa fa-delete"></i> Delete
-        </button>
       </li>
     </template>
 
