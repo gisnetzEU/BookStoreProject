@@ -1,0 +1,20 @@
+{
+  "name": "project-local-storage",
+  "version": "1.0.0",
+  "description": "Pratice of JavaScript creating a localStorage application",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gisnetzEU/project-localstorage.git"
+  },
+  "keywords": [
+    "javascript",
+    "localStorage",
+    "webapp"
+  ],
+  "author": "Giselle Montero",
+  "license": "ISC"
+}
